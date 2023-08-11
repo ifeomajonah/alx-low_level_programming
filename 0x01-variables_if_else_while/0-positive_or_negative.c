@@ -7,7 +7,6 @@
 /**
  * main - entry point of function
  *
- * @n: The random generated number
  * Description: function creates a random number
  * output is dependent on the random number
  * condition is displayed using if else statement
