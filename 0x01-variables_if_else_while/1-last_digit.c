@@ -24,7 +24,7 @@ int main(void)
 	 * printf - prints a message based on the inputted values
 	 * @d: Last didgit of random number
 	 */
-	if(d > 5)
+	if (d > 5)
 	{
 		printf("Last digit of %d is %d and is greater than 5\n", n, d);
 	}
