@@ -4,7 +4,6 @@
 
 /**
  * main - entry point
- * @n: Random number generated
  *
  * Description: This programs generates a random interger,
  * extract the last digit and print it and check a few other
