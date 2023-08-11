@@ -4,20 +4,18 @@
 /**
  * main - entry point
  *
- * escription: function that prints
+ * Description: function that prints
  * all single digit number of base 10
  * Return: return 0 for success
  */
 
 int main(void)
 {
-	int number
-	
-	num = 0;
+	int num = 0;
 
-	while (0 < 10)
+	while (num < 10)
 	{
-		putchar(num);
+		putchar('0' + num);
 		num++;
 	}
 	putchar('\n');
