@@ -8,28 +8,23 @@
 
 int main(void)
 {
-	int num, num_, num_one, num_two;
-	
-	for(num = 48; num <= 57; num++)
-	{
-		for (num_ = num + 1; num_ <= 57; num_++)
-		{
-			
-			for (num_one = 48; num_one <= 57; num_one++)
-			{
-				for (num_two = num_one + 1; num_two <= 57; num_two++)
-				{
-					putchar(num);
-					putchar(num_);
-					putchar(' ');
-					putchar(num_one);
-					putchar(num_two);
+	int num, num;
 
-					if (!(num == 57 && num_ == 56 && num_one == 57 && num_two == 57))
-					{
-						putchar(',');
-						putchar(' ');
-					}
+	for (num = 0; num < 100; num++)
+	{
+		for (num_ = 0; num_ < 100; num_++)
+		{
+			if (num < num_)
+			{
+				putchar((num / 10) + 48);
+				putchar((num % 10) + 48);
+				putchar(' ');
+				putchar((num_ / 10) + 48);
+				putchar((num_ % 10) + 48);
+				if (num != 98 || num_ != 99)
+				{
+					putchar(',');
+					putchar(' ');
 				}
 			}
 		}
