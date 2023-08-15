@@ -1,0 +1,17 @@
+/**
+ * add - function that adds two number
+ * @num: first number to add
+ * @num_one: second number to add
+ *
+ * Return: integer
+ */
+
+int add(int num, int num_one)
+{
+	int num, num_one;
+
+	int result = num + num_one;
+
+	_putchar(result + '0');
+	return (result);
+}
