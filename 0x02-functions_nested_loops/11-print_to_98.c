@@ -10,25 +10,24 @@ void print_to_98(int n)
 {
 	int j, z;
 
-	if (n < 9)
+	if ((n = 0) || (n < 9))
 	{
-		while (n <= 9)
+		for (n = n; n < 10; n++)
 		{
-			_putchar(n + 48);
-			_putchar(',');
-			n++;
+			_putchar(n + '0');
+			_putchar(' ');
 		}
 
-		j = n;
-
-		for (j = n; j < 30; j++)
-		{
-			for (z = 0; z < 30; z++)
+			for (j = n; j < 98; j++)
 			{
-				_putchar((j % 10) + 48);
-				_putchar((z % 10) + 48);
-				_putchar(',');
+
+				for (z = 0; z < 98; z++)
+				{
+					_putchar((j / 10) + '0');
+					_putchar((z % 10) + '0');
+					_putchar(' ');
+				}
 			}
-		}
+	
 	}
 }
