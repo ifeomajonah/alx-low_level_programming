@@ -15,6 +15,14 @@ void times_table(void)
 		for (l = 0; l <= 9; l++)
 		{
 			result = i * l;
+
+			if (l == 0 && result == 0)
+			{
+				_putchar(result + '0');
+				_putchar(',');
+				_putchar(' ');
+			}
+
 			if (l == 9 && result == 0)
                                 {
                                         _putchar(' ');
@@ -28,18 +36,18 @@ void times_table(void)
                                 }
 			if (result <= 9)
 			{
-				 if (l == 9 && result == 0 && result == 9)
+				/* if (l == 9 && result == 0 && result == 9)*/
                                /* {
                                         _putchar(' ');
                                         _putchar(result + '0');
                                 }*/
 
-				if (l == 0 && result == 0)
+				/*if (l == 0 && result == 0)
 				{
 					_putchar(result + '0');
 					_putchar(',');
 					_putchar(' ');
-				}
+				}*/
 
 				/*if (l == 9 && result == 0 && result == 9)
 				{
