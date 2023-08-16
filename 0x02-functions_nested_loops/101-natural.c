@@ -26,4 +26,6 @@ int main(void)
 	result = j + y;
 
 	printf("%d\n", result);
+
+	return (0);
 }
