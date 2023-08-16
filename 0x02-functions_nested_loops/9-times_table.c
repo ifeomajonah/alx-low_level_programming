@@ -8,77 +8,25 @@
 
 void times_table(void)
 {
-	int i, l, result;
+	int z, i, j;
 
-	for (i = 0; i <= 9; i++)
+	for (z = 0; z <= 9; z++)
 	{
-		for (l = 0; l <= 9; l++)
-		{
-			result = i * l;
+		_putchar('0');
 
-			if (l == 0 && result == 0)
-			{
-				_putchar(result + '0');
-				_putchar(',');
-				_putchar(' ');
-			}
-
-			if (l == 9 && result == 0)
-                                {
-                                        _putchar(' ');
-                                        _putchar(result + '0');
-                                }
-
-			  if (l == 9 && result == 9)
-                                {
-                                        _putchar(' ');
-                                        _putchar(result + '0');
-                                }
-			if (result <= 9)
-			{
-				/* if (l == 9 && result == 0 && result == 9)*/
-                               /* {
-                                        _putchar(' ');
-                                        _putchar(result + '0');
-                                }*/
-
-				/*if (l == 0 && result == 0)
-				{
-					_putchar(result + '0');
-					_putchar(',');
-					_putchar(' ');
-				}*/
-
-				/*if (l == 9 && result == 0 && result == 9)
-				{
-					_putchar(' ');
-					_putchar(result + '0');
-				}*/
-
-				if(l != 9 && result <= 9)
-				{
-					_putchar(' ');
-					_putchar(result + '0');
-					_putchar(',');
-					_putchar(' ');
-				}
-			}
-			else if (result > 9)
-			{
-				_putchar((result / 10) + '0');
-				_putchar((result % 10) + '0');
-
-			}
-			 if (l != 9 && result > 9)
+			for (i = 1; i <= 9; i++)
 			{
 				_putchar(',');
 				_putchar(' ');
+
+				j = z * i;
+
+				if (j <= 9)
+					_putchar(' ');
+				else
+					_putchar((j / 10) + '0');
+				_putchar((j % 10) + '0');
 			}
-
-
-		}
-			_putchar('\n');
+		_putchar('\n');
 	}
-
-
 }
