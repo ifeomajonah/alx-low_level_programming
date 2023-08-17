@@ -15,6 +15,12 @@ int main(void)
 	char buzz[20] = "Buzz";
 	char fb[20] = "FizzBuzz";
 
+	/**
+	 * sprintf - converts a number to a string and stores it
+	 * strcpy - swaps teh content of a string
+	 * printf - prints on the terminal
+	 */
+
 	for (number = 1; number <= 100; number++)
 	{
 		if (number % 3 == 0 && number % 5 == 0)

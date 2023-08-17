@@ -11,39 +11,21 @@ void print_diagonal(int n)
 {
 	int number, z;
 
-	for (number = 0; number < n; number++)
+	if (n > 0)
 	{
-		_putchar(48);
-
-		for (z = 1; z < n; z++)
+		for (number = 0; number < n; number++)
 		{
-			_putchar(48);
-		}
-		_putchar('\n');
-	}
-
-	/*if (n > 0)
-	{
-		for (number = 1; number <= n; number++)
-		{
-			for (z = 0; z < n; z++)
+			z = number;
+			while (z--)
 			{
-				_putchar(48);
-				_putchar(92);
-				_putchar('\n');
+				_putchar(' ');
 			}
-
-			z = 0;
-			
-			while (z < n)
-			{
-				_putchar(48);
-				_putchar('\n');
-				z++;
-			}
-
 			_putchar(92);
 			_putchar('\n');
 		}
-	}*/
+	}
+	else
+	_putchar('\n');
+
+
 }
