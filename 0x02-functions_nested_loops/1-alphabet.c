@@ -1,5 +1,5 @@
 /* Program to output lowercase of teh alphabet */
-#include <stdio.h>
+#include "main.h"
 
 /**
  * print_alphabet -  prints the alphabet, in lowercase
