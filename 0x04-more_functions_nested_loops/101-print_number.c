@@ -9,7 +9,7 @@
 
 void print_number(int n)
 {
-	int i, r;
+	int i, r, m;
 
 	if (n >= 0 && n <= 9)
 	{
@@ -39,9 +39,15 @@ void print_number(int n)
 		_putchar(((n % 10) % 10) + '0');
 		_putchar((n % 10) + '0');
 	}
-	/*else if ( )
+	else if (n <= -100 && n > -1000)
 	{
-	} */
+		_putchar('-');
+		m = -n;
+		_putchar((m / 1000) + '0');
+                _putchar(((m / 100) % 10) + '0');
+                _putchar(((m / 10) % 10) + '0');
+                _putchar((m % 10) + '0');
+	}
 	else if (n >= 1000 && n < 10000)
 	{
 		_putchar((n / 1000) + '0');
