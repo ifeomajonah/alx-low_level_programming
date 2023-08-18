@@ -10,7 +10,7 @@
 int main(void)
 {
 	int number;
-	
+
 	/**
 	 * printf - prints on the terminal
 	 */
