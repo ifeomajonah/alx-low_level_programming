@@ -9,24 +9,25 @@
 
 void puts_half(char *str)
 {
-	int half, w;
-	int v = 0;
+	int a = 0;
+	int b;
 
-	while (str[v] != '\0')
+	while (str[a] != '\0')
 	{
-		v++;
+		a++;
 	}
-	half = v / 2;
-	if (v % 2 == 0)
+	if (a % 2 == 1)
 	{
-		for (; half < v; half++)
-			_putchar(str[half]);
+		b = (a - 1) / 2;
+		b += 1;
 	}
-	else if (v % 2 != 0)
+	else
 	{
-		w = (v - 1) / 2;
-		for (; w < v; w++)
-			_putchar(str[w]);
+		b = a / 2;
 	}
-	_putchar(10);
+	for (; b < a; b++)
+	{
+		_putchar(str[b]);
+	}
+	_putchar('\n');
 }
