@@ -11,9 +11,10 @@
 
 int main(int argc, char *argv[])
 {
-	(void)argc;
-
-	printf("%s\n", argv[0]);
-
-	return (0);
-}
+	if (argc > 1)
+	{
+		for (i = 1; i < argc; i++)
+		{
+			product = atoi(argv[i] * argv[(i + 1)])
+		}
+	    
