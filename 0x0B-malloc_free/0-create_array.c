@@ -29,6 +29,10 @@ char *create_array(unsigned int size, char c)
 		str[i] = '\0';
 		return (str);
 	}
+	else if (str == NULL)
+	{
+		return (NULL);
+	}
 
 		return ('\0');
 	free(str);
