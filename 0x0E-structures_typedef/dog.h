@@ -10,17 +10,8 @@
 
 typedef struct dog
 {
-	/**
-	 * @name: name of dog
-	 */
 	char *name;
-	/**
-	 * @age: age of dog
-	 */
 	float age;
-	/**
-	 * @owner: owner of teh dog
-	 */
 	char *owner;
 };
 
