@@ -3,4 +3,4 @@
 
 #define SIZE 1024
 
-#endif /* OBJECT_LIKE_MARCO_H
+#endif /* OBJECT_LIKE_MARCO_H */
