@@ -8,11 +8,20 @@
  * @owner: Last member
  */
 
-typedef struct dog
+struct dog
 {
-	char *name;
-	float age;
-	char *owner;
+        /**
+         * @name: name of dog
+         */
+        char *name;
+        /**
+         * @age: age of dog
+         */
+        float age;
+        /**
+         * @owner: owner of teh dog
+         */
+        char *owner;
 };
 
 void init_dog(struct dog *d, char *name, float age, char *owner);
