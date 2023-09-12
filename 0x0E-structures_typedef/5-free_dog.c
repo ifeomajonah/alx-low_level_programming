@@ -1,13 +1,10 @@
-#include <stlib.h>
+#include <stdlib.h>
 #include "dog.h"
 
 /**
- * free_dog - function that frees dogs
- * @d: pointer to construct
- *
- * Return: return void
+ * free_dog - frees memory allocated for a struct dog
+ * @d: struct dog to free
  */
-
 void free_dog(dog_t *d)
 {
 	if (d)
