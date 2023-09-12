@@ -2,74 +2,90 @@
 #include "dog.h"
 
 /**
- * lengthen - function that creates a new dog
- * @n: first member
+ * _strlen - returns the length of a string
+ * @s: string to evaluate
  *
- * Return: return int
+ * Return: the length of the string
  */
-
-int lengthen(char *n)
+int _strlen(char *s)
 {
-	int i = 0;
+	int i;
 
-	while (*n != '\0')
+	i = 0;
+
+	while (s[i] != '\0')
 	{
 		i++;
-		n++;
 	}
+
 	return (i);
 }
 
 /**
- * loopseen - function that loops through
- * @lop: pointer to copy into
- * @loop: pointer to copy from
- * @size: size to copy
+ * *_strcpy - copies the string pointed to by src
+ * including the terminating null byte (\0)
+ * to the buffer pointed to by dest
+ * @dest: pointer to the buffer in which we copy the string
+ * @src: string to be copied
  *
- * Return: void
+ * Return: the pointer to dest
  */
-
-void loopseen(char *lop, char *loop, int size)
+char *_strcpy(char *dest, char *src)
 {
-	int i = 0;
+	int len, i;
 
-	for (; i < size; i++)
-		lop[i] = loop[i];
+	len = 0;
 
-	lop[i] = '\0';
+	while (src[len] != '\0')
+	{
+		len++;
+	}
+
+	for (i = 0; i < len; i++)
+
+	{
+		dest[i] = src[i];
+	}
+	dest[i] = '\0';
+
+	return (dest);
 }
 
-
 /**
- * new_dog - function that creates a new dog
- * @name: first member
- * @age: second member
- * @owner: third member
+ * new_dog - creates a new dog
+ * @name: name of the dog
+ * @age: age of the dog
+ * @owner: owner of the dog
  *
- * Return: return dog_t
+ * Return: pointer to the new dog (Success), NULL otherwise
  */
-
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	char *n_store, *o_store;
-	int name_num = lengthen(name);
-	int owner_num = lengthen(owner);
-	dog_t *new_dog;
+	dog_t *dog;
+	int len1, len2;
 
-	new_dog = (dog_t *)malloc(sizeof(dog_t));
+	len1 = _strlen(name);
+	len2 = _strlen(owner);
 
-	n_store = (char *)malloc((sizeof(char) * name_num) + 1);
-	o_store = (char *)malloc((sizeof(char) * owner_num) + 1);
-
-	if (n_store == NULL || o_store == NULL)
+	dog = malloc(sizeof(dog_t));
+	if (dog == NULL)
 		return (NULL);
 
-	loopseen(n_store, name, name_num);
-	loopseen(o_store, owner, owner_num);
-
-	new_dog->name = n_store;
-	new_dog->age = age;
-	new_dog->owner = o_store;
-
-	return (new_dog);
+	dog->name = malloc(sizeof(char) * (len1 + 1));
+	if (dog->name == NULL)
+	{
+		free(dog);
+		return (NULL);
+	}
+	dog->owner = malloc(sizeof(char) * (len2 + 1));
+	if (dog->owner == NULL)
+	{
+		free(dog);
+		free(dog->name);
+		return (NULL);
+	}
+	_strcpy(dog->name, name);
+	_strcpy(dog->owner, owner);
+	dog->age = age;
+	return (dog);
 }

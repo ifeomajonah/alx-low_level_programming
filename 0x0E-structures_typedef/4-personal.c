@@ -55,7 +55,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	int name_num = lengthen(name);
 	int owner_num = lengthen(owner);
 	dog_t *new_dog;
-	
+
 	new_dog = (dog_t *)malloc(sizeof(dog_t));
 
 	n_store = (char *)malloc((sizeof(char) * name_num) + 1);
@@ -71,5 +71,5 @@ dog_t *new_dog(char *name, float age, char *owner)
 	new_dog->age = age;
 	new_dog->owner = o_store;
 
-        return (new_dog);
+	return (new_dog);
 }
