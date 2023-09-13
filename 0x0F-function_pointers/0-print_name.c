@@ -10,5 +10,12 @@
 
 void print_name(char *name, void (*f)(char *))
 {
+	/**
+	 * f - function pointer
+	 * @*: pointer to a char
+	 *
+	 * Return: nothing
+	 */
+
 	f(name);
 }
