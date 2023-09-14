@@ -16,26 +16,27 @@ void print_strings(const char *separator, const unsigned int n, ...)
 {
 	unsigned int i;
 	char *flex;
+	va_list list;
 
-	if (separator != NULL)
+	if (separator == NULL)
+		separator = "";
+
+	va_start(list, n);
+
+	for (i = 0; i < n; i++)
 	{
-		va_list list;
+		flex = va_arg(list, char *);
 
-		va_start(list, n);
+		if (flex == NULL)
+			printf("(nil)");
 
-		for (i = 0; i < n; i++)
-		{
-			flex = va_arg(list, char *);
-			if (flex == NULL)
-				printf("(nil)");
+		printf("%s", flex);
 
-			if (i < (n - 1))
-				printf("%s%s", flex, separator);
-			else
-				printf("%s", flex);
-		}
+		if (i < (n - 1))
+			printf("%s", separator);
+
+	}
 	printf("\n");
 	va_end(list);
-	}
 
 }
