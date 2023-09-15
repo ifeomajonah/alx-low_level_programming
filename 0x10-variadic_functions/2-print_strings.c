@@ -26,8 +26,8 @@ void print_strings(const char *separator, const unsigned int n, ...)
 
 		if (flex == NULL)
 			printf("(nil)");
-
-		printf("%s", flex);
+		else
+			printf("%s", flex);
 
 		if (i < (n - 1) && separator != NULL)
 			printf("%s", separator);
